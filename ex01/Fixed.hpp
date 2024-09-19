@@ -16,6 +16,6 @@ public:
     float toFloat(void) const;
     Fixed(const int _value);
     Fixed(const float floatingPoint);
-
 };
+
 std::ostream &operator<<(std::ostream &os, const Fixed &copy);

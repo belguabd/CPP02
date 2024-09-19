@@ -33,7 +33,9 @@ public:
     Fixed operator/(const Fixed &obj);
 
     Fixed &operator++();
+    Fixed &operator--();
     Fixed operator++(int);
+    Fixed operator--(int);
 
     static Fixed &min( Fixed &fixedPoint ,  Fixed &  fixedPoint2);
     static const Fixed &min(const  Fixed &fixedPoint ,const  Fixed &  fixedPoint2);
@@ -41,5 +43,4 @@ public:
     static const Fixed &max(const  Fixed &fixedPoint ,const  Fixed &  fixedPoint2);
 
 };
-
 std::ostream &operator<<(std::ostream &out, const Fixed &f);
