@@ -36,12 +36,12 @@ bool Fixed::operator!=(const Fixed &obj) { return (this->_value != obj._value); 
 Fixed Fixed::operator+(const Fixed &obj)
 {
     Fixed newObj;
-    newObj._value = this->_value + obj._value;
+    newObj._value = this->toFloat() + obj.toFloat();
     return newObj;
 }
 Fixed Fixed::operator-(const Fixed &obj)
 {
-    return Fixed(this->_value - obj._value);
+    return Fixed(this->toFloat() - obj.toFloat());
 }
 
 Fixed Fixed::operator*(const Fixed &obj)

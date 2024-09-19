@@ -29,3 +29,9 @@ int Fixed::toInt(void) const
 {
     return (_value >> fractionalBits);
 }
+
+
+int Fixed::getRawBits(void) const
+{
+    return (this->_value);
+}

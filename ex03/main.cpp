@@ -1,16 +1,17 @@
 
 #include "Point.hpp"
 
-int main()
+int main(void)
 {
-    Point a(0.0f, 0.0f);
-    Point b(5.0f, 0.0f);
-    Point c(0.0f, 5.0f);
-    Point p(0.1f, 0.002f);
 
-    if (Point::bsp(a, b, c, p))
-        std::cout << "The point is inside the triangle." << std::endl;
+    Point a(2, 2.5);
+    Point b(-2.5, 8.25);
+    Point c(-0.5, 8.5);
+    Point point(0, 0);
+    if(bsp(a, b, c, point))
+        std::cout << "Point is inside the triangle\n";
     else
-        std::cout << "The point is outside the triangle." << std::endl;
+        std::cout << "Point is outside the triangle\n";
+
     return 0;
 }
